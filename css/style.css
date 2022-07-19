@@ -44,10 +44,10 @@ section {
 	--base-color: hsl(var(--hue) 100% 50%);
 	--base-color-second: hsl(var(--hue) 92% 40% / 94%);
 	--bg-color: hsla(0, 0%, 0%, 0.9);
-	--bg-color-alt: hsl(var(--hue) 100% 95%);
+	--bg-color-alt: hsla(0, 0%, 96%, 1);
 	--title-color: hsla(0, 0%, 16%, 1);
 	--text-color: hsla(0, 0%, 14%, 1);
-	--body-color: hsl(0deg 0% 98%);
+	--body-color: hsl(0deg 0% 100%);
 
 	/* fonts */
 	--title-font-size: 1.15rem;
@@ -174,7 +174,7 @@ img.product__img {
 
 div.product__info {
 	display: grid;
-	background-color: white;
+	background-color: var(--body-color);
 	justify-items: flex-start;
 	gap: 1rem;
 	padding: 1rem 1rem;
@@ -243,7 +243,7 @@ button#btn__search {
 	cursor: pointer;
 	width: 6rem;
 	height: 3.25rem;
-	background-color: var(--bg-color);
+	background-color: var(--base-color-second);
 	border: 1px solid transparent;
 	color: var(--body-color);
 }
@@ -271,7 +271,7 @@ main.cart__content {
 }
 
 h2.cart__title {
-	background-color: var(--bg-color);
+	background-color: var(--base-color-second);
 	color: var(--body-color);
 	width: 100%;
 	height: 3.25rem;
