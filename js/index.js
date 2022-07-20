@@ -58,15 +58,15 @@ ulProducts.addEventListener("click", interceptingProductsList);
 let listCart = [];
 
 function interceptingProductsList(event) {
-	emptyCart.style.display = "none";
-	mainCart.style.height = "20.5rem";
-	mainCart.style.display = "block";
-	ulCart.style.display = "grid";
-	sectionResult.style.display = "grid";
-
 	let btnAddCart = event.target;
 
 	if (btnAddCart.tagName == "BUTTON") {
+		emptyCart.style.display = "none";
+		mainCart.style.height = "20.5rem";
+		mainCart.style.display = "block";
+		ulCart.style.display = "grid";
+		sectionResult.style.display = "grid";
+
 		let idProduct = btnAddCart.id;
 
 		let product = data.find(product => {
