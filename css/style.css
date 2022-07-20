@@ -135,7 +135,7 @@ main {
 
 main.products__content {
 	display: flex;
-	gap: 3.5rem;
+	gap: 3rem;
 	align-items: flex-start;
 	align-content: center;
 	justify-content: center;
@@ -219,7 +219,6 @@ button.add__cart:hover {
 /* ASIDE COMPONENTS */
 aside.components {
 	display: grid;
-	gap: 1.75rem;
 	justify-content: end;
 	width: 29%;
 }
@@ -228,6 +227,7 @@ form#form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 1.75rem;
 }
 
 input#product__search {
@@ -300,19 +300,111 @@ span.empty__message {
 
 ul.cart__list {
 	display: none;
-	align-items: center;
+	align-items: start;
 	justify-items: center;
-	gap: 1.75rem;
-	width: 100%;
+	justify-content: start;
+	margin-top: 1rem;
+	gap: 0.75rem;
+	width: 98%;
+	max-height: 78%;
 	background-color: var(--bg-color-alt);
+	overflow-y: auto;
 }
 
-li.item__cart {
+ul.cart__list::-webkit-scrollbar {
+	width: 0.45rem;
+}
+
+ul.cart__list::-webkit-scrollbar-track {
+	background-color: var(--body-color);
+	border-radius: 4px;
+}
+
+ul.cart__list::-webkit-scrollbar-thumb {
+	background-color: var(--base-color-second);
+	border-radius: 4px;
+}
+
+.cart__list li {
+	display: flex;
+	align-items: center;
+	width: 18rem;
+	height: 7.5rem;
+	margin-left: 1rem;
+	justify-content: flex-start;
+	border-color: var(--base-color-second);
+}
+
+.cart__list li:hover {
+	border-color: var(--base-color-second);
+}
+
+.remove {
+	opacity: 0;
+	transition: 1s;
+}
+
+.cart__list li img {
+	max-width: 6rem;
+	height: 100%;
+	border: none;
+	background-color: var(--body-color);
+}
+
+.cart__list li div.product__info {
+	background-color: var(--bg-color-alt);
+	padding: 0.35rem 0.5rem;
+	gap: 0.5rem;
+}
+
+.cart__list li div h2.product__title {
+	font-size: 1rem;
+}
+
+.cart__list li div button.remove__cart {
+	color: var(--text-color);
+	font-size: var(--text-font-size);
+	background-color: transparent;
+	padding: 0;
+	text-align: left;
+	cursor: pointer;
+}
+
+.cart__list li div button.remove__cart:hover {
+	color: red;
+}
+
+.cart__list li div span.category,
+.cart__list li div p.product__description {
 	display: none;
 }
 
 section.result__cart {
 	display: none;
+	height: 7.5rem;
+	background-color: var(--bg-color);
+	justify-content: start;
+	align-items: center;
+	align-content: space-around;
+	padding: 0 1rem;
+}
+
+section.result__cart div.quantity__content {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 9.25rem;
+}
+
+section.result__cart div.total__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section.result__cart div h3,
+section.result__cart div span {
+	color: var(--body-color);
 }
 
 /* CONTACT SECTION */

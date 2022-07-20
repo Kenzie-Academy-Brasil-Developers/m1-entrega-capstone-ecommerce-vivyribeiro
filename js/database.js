@@ -3,7 +3,7 @@
 const data = [
 	{
 		id: 1,
-		img: "../img/products/earring1.png",
+		img: "./img/products/earring1.png",
 		nameItem: "Brincos de Ouro Portlligat",
 		description:
 			"Dinamizados e modernos, esses brincos brilham como o horizont...",
@@ -13,7 +13,7 @@ const data = [
 	},
 	{
 		id: 2,
-		img: "../img/products/necklace1.png",
+		img: "./img/products/necklace1.png",
 		nameItem: "Pingente de Folha de Oliveira",
 		description: "Inspirado no ramo de oliveira, um símbolo de paz...",
 		value: 1200,
@@ -22,7 +22,7 @@ const data = [
 	},
 	{
 		id: 3,
-		img: "../img/products/necklace4.png",
+		img: "./img/products/necklace4.png",
 		nameItem: "T1 Pingente Círcular",
 		description:
 			"Traçado em diamantes cintilantes, o desenho de ponta biselada deste pingente...",
@@ -32,7 +32,7 @@ const data = [
 	},
 	{
 		id: 4,
-		img: "../img/products/earring3.png",
+		img: "./img/products/earring3.png",
 		nameItem: "Brincos Gancho de Bolat",
 		description:
 			"Brincos elegantes e simples de cair adicionam um toque moderno a qualquer visual...",
@@ -42,7 +42,7 @@ const data = [
 	},
 	{
 		id: 5,
-		img: "../img/products/necklace2.png",
+		img: "./img/products/necklace2.png",
 		nameItem: "Pingente X Interligado",
 		description:
 			"Uma delicada corrente de ouro amarelo 18k combinada com dois círculos de interligação...",
@@ -52,17 +52,16 @@ const data = [
 	},
 	{
 		id: 6,
-		img: "../img/products/earring2.png",
-		nameItem: "Brincos Folhas de Azeitona",
-		description:
-			"Os diamantes deslumbram-se sobre as folhas no formato dum ramo...",
+		img: "./img/products/earring2.png",
+		nameItem: "Brincos Folha de Azeitona",
+		description: "Os diamantes deslumbram-se sobre as folhas no formato...",
 		value: 1300,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Brincos"]
 	},
 	{
 		id: 7,
-		img: "../img/products/earring4.png",
+		img: "./img/products/earring4.png",
 		nameItem: "Brincos de Barra",
 		description:
 			"Estas barras ousadas são um brinco moderno. Tão multifacetada quanto icônica...",
@@ -72,7 +71,7 @@ const data = [
 	},
 	{
 		id: 8,
-		img: "../img/products/necklace3.png",
+		img: "./img/products/necklace3.png",
 		nameItem: "Colar Pingente de Esmeralda",
 		description:
 			"Estilize esta corrente ajustável com outros pingentes para um...",
@@ -82,7 +81,7 @@ const data = [
 	},
 	{
 		id: 9,
-		img: "../img/products/necklace5.png",
+		img: "./img/products/necklace5.png",
 		nameItem: "Colar de Ouro Splash",
 		description:
 			"Tão multifacetado quanto icônico, esse colar é um lembrete tangível...",
@@ -91,6 +90,8 @@ const data = [
 		tag: ["Colares"]
 	}
 ];
+
+// console.log(data[0]);
 
 // OLD DATA BASE
 /*
