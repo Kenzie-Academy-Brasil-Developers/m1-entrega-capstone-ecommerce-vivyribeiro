@@ -23,7 +23,7 @@ const data = [
 	{
 		id: 3,
 		img: "./img/products/necklace4.png",
-		nameItem: "T1 Pingente Círcular",
+		nameItem: "T1 Pingente Circular",
 		description:
 			"Traçado em diamantes cintilantes, o desenho de ponta biselada deste pingente...",
 		value: 1240,

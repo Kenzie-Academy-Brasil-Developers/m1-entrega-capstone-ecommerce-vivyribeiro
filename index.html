@@ -26,10 +26,10 @@
 					<img class="logo__img" src="./img/logo.png" alt="Logo Bijoux" />
 				</a>
 				<ul class="header__nav--menu">
-					<li><a class="menu__link active" href="#products">Todos</a></li>
-					<li><a class="menu__link" href="#earrings">Brincos</a></li>
-					<li><a class="menu__link" href="#necklaces">Colares</a></li>
-					<li><a class="menu__link" href="#sets">Conjuntos</a></li>
+					<li><a class="menu__link" href="">Todos</a></li>
+					<li><a class="menu__link" href="">Brincos</a></li>
+					<li><a class="menu__link" href="">Colares</a></li>
+					<li><a class="menu__link" href="">Conjuntos</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -37,8 +37,18 @@
 		<!-- MAIN -->
 		<main>
 			<!-- PRODUCTS SECTION -->
-			<section id="products" class="container">
+			<section class="container">
 				<main class="products__content">
+					<!-- MODAL -->
+					<section id="overlay">
+						<div id="modal__result">
+							<button class="close__modal">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+							<h2 class="result__message"></h2>
+						</div>
+					</section>
+
 					<ul class="products__list"></ul>
 
 					<aside class="components">

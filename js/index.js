@@ -86,6 +86,7 @@ function addProductCart(product) {
 		listCart.push(product);
 
 		listingCardProduct(listCart, ulCart);
+
 		sumProductsCart(listCart);
 	}
 }
@@ -96,18 +97,18 @@ function sumProductsCart(list) {
 		0
 	);
 
-	if (list.length == 1) {
-		totalListQuantity.innerText = `${list.length} item`;
+	let quantity = list.length;
+
+	if (quantity == 1) {
+		totalListQuantity.innerText = `${quantity} item`;
 	} else {
-		totalListQuantity.innerText = `${list.length} itens`;
+		totalListQuantity.innerText = `${quantity} itens`;
 	}
 
 	totalListPrice.innerText = `R$ ${listTotalPrice.toFixed(2)}`.replace(
 		".",
 		","
 	);
-
-	// return listTotalPrice;
 }
 
 // INTERCEPTING, REMOVE AND SUBTRACTING PRODUCT TO CART LIST
@@ -166,4 +167,94 @@ function updateValueCart(list) {
 	);
 
 	// return listTotalPrice;
+}
+
+// IMPORTING ELEMENTS TO FURTHER FUNCTIONS
+let form = document.getElementById("form"),
+	overlayModal = document.getElementById("overlay"),
+	modalMessage = document.querySelector(".result__message");
+
+// FILTER PRODUCTS BY CATEGRIES NAV SELECTION
+let ulCategories = document.querySelector(".header__nav--menu");
+
+ulCategories.addEventListener("click", e => {
+	e.preventDefault();
+
+	let link = e.target,
+		clickedLink = e.target.textContent.toLowerCase();
+
+	link.href = `#${clickedLink}`;
+	ulProducts.setAttribute("id", `${clickedLink}`);
+
+	showProductsByCategory(clickedLink, data);
+});
+
+function showProductsByCategory(tag, list) {
+	let categoryList = [];
+
+	for (let product of list) {
+		let tagProduct = product.tag.join("").toLowerCase();
+
+		if (tagProduct == tag) {
+			categoryList.push(product);
+		} else if (tag == "todos") {
+			categoryList.push(product);
+		}
+	}
+
+	if (categoryList.length == 0) {
+		modalMessage.innerText = "Ops! Ainda não há produtos nessa categoria! 😅";
+		noResultToList(categoryList);
+		listingCardProduct(data, ulProducts);
+	} else {
+		listingCardProduct(categoryList, ulProducts);
+	}
+
+	return categoryList;
+}
+
+// SEARCH FUNCTION
+form.addEventListener("submit", e => {
+	e.preventDefault();
+
+	let inputValue = e.target[0].value.trim();
+
+	let resultSearch = userSearch(inputValue, data);
+
+	if (resultSearch.length == 0) {
+		modalMessage.innerText = "Produto não encontrado! ☹️";
+
+		noResultToList(resultSearch);
+	} else {
+		listingCardProduct(resultSearch, ulProducts);
+	}
+
+	form.reset();
+	// console.log(e.target[0].value);
+});
+
+function userSearch(inputValue, list) {
+	let arrResultSearch = [];
+
+	list.map(item => {
+		let product = item.nameItem.toLowerCase(),
+			valueSearch = inputValue.toLowerCase();
+
+		if (product.includes(valueSearch)) {
+			arrResultSearch.push(item);
+		}
+	});
+
+	return arrResultSearch;
+}
+
+// MESSAGE TO SHOW WHEN EVEN THE SEARCH EITHER CATEGORIES NAV RETURN EMPTY OR NOT FOUND
+function noResultToList(list) {
+	if (list.length == 0) {
+		overlayModal.style.display = "block";
+
+		document.querySelector(".close__modal").addEventListener("click", () => {
+			overlayModal.style.display = "none";
+		});
+	}
 }
