@@ -8,15 +8,17 @@ const data = [
 		description:
 			"Dinamizados e modernos, esses brincos brilham como o horizont...",
 		value: 1000,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Brincos"]
 	},
 	{
 		id: 2,
 		img: "./img/products/necklace1.png",
-		nameItem: "Pingente de Folha de Oliveira",
+		nameItem: "Pingente Folhas de Oliveira",
 		description: "Inspirado no ramo de oliveira, um símbolo de paz...",
 		value: 1200,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Colares"]
 	},
@@ -27,6 +29,7 @@ const data = [
 		description:
 			"Traçado em diamantes cintilantes, o desenho de ponta biselada deste pingente...",
 		value: 1240,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Colares"]
 	},
@@ -37,6 +40,7 @@ const data = [
 		description:
 			"Brincos elegantes e simples de cair adicionam um toque moderno a qualquer visual...",
 		value: 1100,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Brincos"]
 	},
@@ -47,15 +51,17 @@ const data = [
 		description:
 			"Uma delicada corrente de ouro amarelo 18k combinada com dois círculos de interligação...",
 		value: 1500,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Colares"]
 	},
 	{
 		id: 6,
 		img: "./img/products/earring2.png",
-		nameItem: "Brincos Folha de Azeitona",
+		nameItem: "Brincos Folhas de Azeitona",
 		description: "Os diamantes deslumbram-se sobre as folhas no formato...",
 		value: 1300,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Brincos"]
 	},
@@ -66,6 +72,7 @@ const data = [
 		description:
 			"Estas barras ousadas são um brinco moderno. Tão multifacetada quanto icônica...",
 		value: 950,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Brincos"]
 	},
@@ -76,6 +83,7 @@ const data = [
 		description:
 			"Estilize esta corrente ajustável com outros pingentes para um...",
 		value: 1890,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Colares"]
 	},
@@ -86,6 +94,7 @@ const data = [
 		description:
 			"Tão multifacetado quanto icônico, esse colar é um lembrete tangível...",
 		value: 1150,
+		quantityNumbers: 1,
 		addCart: "Adicionar ao carrinho",
 		tag: ["Colares"]
 	}
